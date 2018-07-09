@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+	
+<h1>{{ getFullName(firstName, lastName).name }}</h1>
+
+</div>
+
+
+//return name with object
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data: {
+       
+		 firstName: 'Kennedy',
+		  lastName: 'Njeri'
+
+      },
+
+     methods: {
+      getFullName: function(first, last) {
+
+      	return { 
+
+         name:  first + ' ' + last 
+
+        }
+
+      	}
+      }
+    
+
+	});
+
+</script>
+</body>
+</html>

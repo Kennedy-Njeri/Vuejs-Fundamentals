@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+
+	<button v-on:click="clickedButton('Hello world', $event)">Click Here!</button>
+	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      methods : {
+         
+         clickedButton : function (message, event) {
+         	console.log(event);
+
+         	alert(message);
+
+         }
+
+      }
+
+     
+
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+	<h1>Movies</h1>
+	
+	<ul>
+	
+	<li v-for="title in movieTitles">{{ title }}</li>	
+
+	</ul>
+   
+   <h2>Employeees</h2>
+   <table border="1">
+    <thead>
+    	<tr>
+    		<th>Name</th>
+    		<th>Title</th>
+    		<th>Company</th>
+        <th>Index</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr v-for="(employee, index) in employeees">
+    		<td>{{ employee.name }}</td>
+    		<td>{{ employee.title }}</td>
+    		<td>{{ companyName }}</td>
+        <td>{{ index }}</td>
+    		</tr>
+    </tbody>
+   </table>
+	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data : {
+         
+         movieTitles: ['Taken', 'The matrix', 'Black Panther', 'The matrix Reloaded'],
+
+         employeees: [
+
+            { name: 'Kennedy', title: 'Technician'},
+            { name: 'Robby', title: 'Marketing manager'},
+            { name: 'Kevin', title: 'Programmer'}
+         ],
+         companyName: 'KaziSafi'
+      
+
+      }
+     
+
+     
+
+	});
+
+</script>
+</body>
+</html>

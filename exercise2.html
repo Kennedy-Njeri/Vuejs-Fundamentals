@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+<!-- modifiers  shift + Enter keys -->
+<div id="app">
+
+<!-- Exercise 1 : make the below text input update a data property on every "keyup" event.Also output the data property. Hint : event.target.value gives access to input value -->
+<input type="text" v-on:Keyup="nameKeyup">
+Output: {{ name }}
+
+
+
+</br></br>
+
+
+
+<!-- Exercise 2 : make the below text input update the data property from exercise 1, but only when pressing the control + enter keys . Hint: The key modifier for the control key named "ctrl" -->
+<input type="text" v-on:Keyup.ctrl.enter="name = $event.target.value">
+Output: {{ name }}
+
+</br></br>
+
+
+<!-- Exercise 3 : Prevent the below form from submitting. Hint : prevent the "submit" event on the form -->
+
+<form action="" method="GET" v-on:submit.prevent>
+  
+  <input type="submit" value="Submit">
+
+</form>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data : {
+      	name : ''
+
+        
+
+      },
+      methods : {
+      
+      nameKeyup: function (event) {
+      	
+      	this.name = event.target.value;
+
+      }
+
+      }
+     
+
+     
+
+	});
+
+</script>
+</body>
+</html>

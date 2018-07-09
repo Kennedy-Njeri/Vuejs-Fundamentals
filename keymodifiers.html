@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+<!-- Keymodifiers .enter or .enter.space -->
+<div id="app">
+
+<input type="text" v-on:Keyup.enter="pressedEnter">
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      methods : {
+
+        pressedEnter: function () {
+           alert("You pressed the Enter Key");
+        }
+
+      }
+     
+
+     
+
+	});
+
+</script>
+</body>
+</html>

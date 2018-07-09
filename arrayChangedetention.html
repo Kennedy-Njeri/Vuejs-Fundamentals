@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+	<ul>
+   
+ <li v-for="n in numbers">{{ n }}</li>
+
+
+  </ul>
+
+
+  <button v-on:click="changeNumber()">Change Number</button>
+	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data : {
+
+        numbers: [1, 2, 3, 4, 5]
+         
+      },
+
+      methods: {
+         
+         changeNumber: function () {
+           
+           Vue.set(this.numbers, 1, 10);
+           alert(this.numbers[1]);
+
+         }
+
+
+      }
+     
+
+     
+
+	});
+
+</script>
+</body>
+</html>

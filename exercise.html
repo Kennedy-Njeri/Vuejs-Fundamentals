@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+
+	<!-- exercise 1: store the title of a movie ( e.g "The matrix") and when it wa released in data properties and output in data properties and output them using string interpolation -->
+	<p>Title: {{ movieTitle }}</p>
+	<p>Realesed: {{ releaseYear }} </p>
+
+
+	<!-- exercise 2:  Output whether or not the movie is old or new by using a method.The movie is old if it was released prior to release year 2000. -->
+	<p>The movie is {{ isMovieOld() }}</p>
+
+    
+    <!-- exercise 3: Bind the movie to the "title" attribute on the following div element . -->
+     <div v-bind:title='movieTitle'>Hover Your mouse Here</div>
+	
+
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data: {
+      	movieTitle: 'The matrix',
+      	releaseYear: 2007
+          
+
+      },
+
+     methods: {
+
+     	isMovieOld: function(releaseYear) {
+     		return this.releaseYear < 2000 ? 'old' : 'new';
+     	}
+    
+ }
+	});
+
+</script>
+</body>
+</html>

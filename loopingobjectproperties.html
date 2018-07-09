@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+
+<ul>
+	<li v-for="(value, propertyName, index) in person">
+	{{ propertyName }} : {{ value }} ({{ index }})
+	</li>
+
+</ul>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+     data: {
+         
+         person : {
+          
+          firstName: 'Kennedy',
+          lastName: 'Njenga',
+          age: 26
+
+         }
+      
+     }
+
+     
+
+	});
+
+</script>
+</body>
+</html>

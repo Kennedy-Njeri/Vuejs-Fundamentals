@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+	<p v-if="itemsInStock > 10"> {{ itemsInStock }} in stock.</p>
+	<p v-else-if="itemsInStock > 0">Hurry up, there are just a few items left!</p>
+	<p v-else>Too bad, we're all out!/p>
+
+	
+</div>
+
+<template v-if="itemsInStock > 50">
+	<p>Special Offer!</p>
+	<p>Looks like we have tons of products in stock....save 20% and order now!</p>
+</template>
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data : {
+
+     itemsInStock: 51
+
+      }
+     
+
+     
+
+	});
+
+</script>
+</body>
+</html>

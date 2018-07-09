@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+<!-- modifiers  shift + Enter keys -->
+<div id="app">
+
+<input type="text" v-on:Keyup.shift.enter="myListener">
+
+<!-- modifiers  shift + Enter using .shift or .meta in mac is command keys -->
+<button v-on:click.meta="myButtonListener">Click Here</button>
+
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      methods : {
+
+        myListener: function () {
+           alert("You pressed the shift + Enter Key");
+        },
+        myButtonListener: function () {
+        	alert("You clicked the Button!");
+        }
+
+      }
+     
+
+     
+
+	});
+
+</script>
+</body>
+</html>

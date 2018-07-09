@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+<!-- Event modifiers once/prevent  -->
+<div id="app">
+
+	<button v-on:click.once="showDialog">Click Here!</button>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      methods : {
+         
+         showDialog : function () {
+      
+
+         	alert("Hello World");
+
+         }
+
+      }
+
+     
+
+	});
+
+</script>
+</body>
+</html>

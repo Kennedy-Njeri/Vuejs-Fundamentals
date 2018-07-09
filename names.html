@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+	<h1>{{ age > 60 ? 'old' : 'young' }}</h1>
+	<h2>{{ name.split(' ')[0] }}</h2>
+	<h3>{{  }}</h3>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+      data: {
+          age: 28,
+		  name: 'kennedy Njeri',
+		  firstName: 'Kennedy',
+		  lastName: 'Njeri'
+
+      },
+
+     methods: {
+      getFullName: function() {
+
+      	return this.firstName + ' ' + this.lastName;
+      	}
+      }
+    
+
+	});
+
+</script>
+</body>
+</html>

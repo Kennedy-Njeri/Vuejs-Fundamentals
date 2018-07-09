@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+
+<p>{{ counter }}</p>
+<p>{{ fullName }}</p>
+<button v-on:click="counter++">Increase Counter</button>
+<button v-on:click="changeName">Change Name</button>
+
+	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+     data: {
+
+     	counter: 1,
+     	firstName: 'Kennedy',
+     	lastName: 'Njeri'
+
+     },
+     methods: {
+
+     	changeName: function() {
+
+         this.firstName = 'Richard';
+         this.lastName = ' quest';
+
+     	}
+
+
+     },
+
+     computed: {
+
+         fullName: function() {
+
+           alert("Assembling full name.....");
+
+           return this.firstName + '' + this.lastName;
+
+         }
+
+     }
+
+     
+
+	});
+
+</script>
+</body>
+</html>

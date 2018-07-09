@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="vue.js"></script>
+
+
+<div id="app">
+	<!-- modifiers such as .name and .name.lazy -->
+<input type="text" v-model.number.lazy="age">
+<p>You entered: {{ age }}</p>
+<p> Type: {{ typeof age }}</p>
+	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	new Vue({
+      
+      el: '#app',
+     data: {
+
+      name : '',
+      age : 28
+      
+     }
+
+     
+
+	});
+
+</script>
+</body>
+</html>
